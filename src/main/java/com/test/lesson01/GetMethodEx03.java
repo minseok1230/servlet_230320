@@ -14,6 +14,7 @@ public class GetMethodEx03 extends HttpServlet{
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// test code
+		// test code 222222
 		
 		//response.setContentType("text/plain");
 		response.setContentType("text/json");
