@@ -13,7 +13,7 @@
 	<%
 	int height = Integer.parseInt(request.getParameter("height"));
 	int weight = Integer.parseInt(request.getParameter("weight"));
-	double BMI =  (double)weight / ((height / 100.0) * (height / 100.0));
+	double BMI =  weight / ((height / 100.0) * (height / 100.0));
 	String result = null;
 	
 	if (BMI <= 20){
