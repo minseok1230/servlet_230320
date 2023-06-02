@@ -11,26 +11,21 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-	<%
-	List<String> goodsList = Arrays.asList(new String[]{ 
-		    "저지방 우유", "요플레 4개", "딸기 1팩", "삼겹살 300g", "생수 6개", "주방 세제"
-		});
-	
-	%>
-
 	<div class="container">
-		<div class="d-flex justify-content-center">
-			<h1>장보기 목록</h1>
-		</div>
-		<table class="table">
+			<h1 class="text-center">장보기 목록</h1>
+		<table class="table text-center">
 			<thead>
 				<tr>
-					<th class="text-center">번호</th>
-					<th class="text-center">품목</th>
+					<th>번호</th>
+					<th>품목</th>
 				</tr>
 			</thead>
 			<tbody>
 				<% 
+					List<String> goodsList = Arrays.asList(new String[]{ 
+					    "저지방 우유", "요플레 4개", "딸기 1팩", "삼겹살 300g", "생수 6개", "주방 세제"
+					});
+				
 					Iterator<String> iter = goodsList.iterator();
 					int i = 1;
 					while (iter.hasNext()){
@@ -39,11 +34,11 @@
 					
 				%>
 				<tr>
-					<td class="text-center"><%=i %></td>
-					<td class="text-center"><%=item %></td>
+					<td><%=i %></td>
+					<td><%=item %></td>
 				</tr>
 				<%
-					i++;
+						i++;
 					}
 				%>
 			</tbody>
