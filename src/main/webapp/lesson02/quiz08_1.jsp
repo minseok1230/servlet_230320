@@ -61,28 +61,31 @@
 	%>
 	
 	<%	
+		// 태그에 보여줄 책 정보 하나 뽑아내기 (강사님 풀이)
 		int origin = Integer.parseInt(request.getParameter("id"));
+		Map<String, Object> target = new HashMap<>(); // {}	
 	
 		for (Map<String, Object> book : list) {
 			if (origin == (int)book.get("id")) {
-			
+				target = book;
+				break;
+			}
+		}
 		
 	
 	%>
-			<div class="container d-flex">
-				<div>
-					<img src="<%=book.get("image")%>" alt="<%=book.get("title")%>" width="300">
+			<div class="container">
+				<div class="d-flex">
+					<div>
+						<img src="<%=target.get("image")%>" alt="<%=target.get("title")%>" width="300">
+					</div>
+					<div>
+						<!-- <span> 태그로 할 경우 d-block으로 설정하면 d-flex와 같은 효과를 얻을 수 있다.  -->
+						<div class="display-1"><b><%=target.get("title") %></b></div>
+						<div class="display-3 text-info"><%=target.get("author") %></div>
+						<div class="display-4 text-secondary"><%=target.get("publisher") %></div>
+					</div>
 				</div>
-				<div>
-					<div class="display-1"><b><%=book.get("title") %></b></div>
-					<div class="display-3 text-info"><%=book.get("author") %></div>
-					<div class="display-4 text-secondary"><%=book.get("publisher") %></div>
-				</div>
-		
 			</div>
-	<%
-			}
-		}
-	%>
 </body>
 </html>
