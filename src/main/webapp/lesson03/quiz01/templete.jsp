@@ -20,8 +20,6 @@
 </style>
 </head>
 <body>
-	
-	
 	<div id="wrap" class="container">
 		<jsp:include page="header.jsp"/>
 		<jsp:include page="menu.jsp"/>
