@@ -51,36 +51,21 @@
 	</thead>
 	<tbody>
 		<%
-		String category = request.getParameter("category");
+		String category = request.getParameter("category"); // null(전체) 또는 카테고리
 		Iterator<Map<String, String>> iter = list.iterator();
-		List<String> aaaa = new ArrayList<>();
-		aaaa.add("지상파");
-		aaaa.add("영화");
-		aaaa.add("드라마");
-		aaaa.add("예능");
-		aaaa.add("스포츠");
 
 		while (iter.hasNext()) {
 			Map<String, String> program = iter.next();
-			if (aaaa.contains(category)) {
-				if (program.get("category").equals(category)) {
-		%>
+			// 카테고리가 null일 때(전체) 또는 카테고리명 일치할 때 
+			if (category == null || category.equals(program.get("category"))) {	
+		%>		
 		<tr>
 			<td><%=program.get("ch") %></td>
 			<td><%=program.get("name") %></td>
 			<td><%=program.get("category") %></td>
 		</tr>
 		<%
-		}
-		} else {
-		%>
-		<tr>
-			<td><%=program.get("ch") %></td>
-			<td><%=program.get("name") %></td>
-			<td><%=program.get("category") %></td>
-		</tr>
-		<%
-		}
+			}
 		}
 		%>
 	</tbody>
