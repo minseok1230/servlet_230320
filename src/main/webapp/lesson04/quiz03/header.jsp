@@ -7,8 +7,8 @@
 </div>
 <nav class="mb-3">
 	<ul class="nav nav-fill w-100 menu ">
-		<li class="nav-item"><a href="#" class="nav-link">리스트</a></li>
-		<li class="nav-item"><a href="#" class="nav-link">물건 올리기</a></li>
-		<li class="nav-item"><a href="#" class="nav-link">마이 페이지</a></li>
+		<li class="nav-item"><a href="/lesson04/quiz03/hongList_layout.jsp" class="nav-link text-white list">리스트</a></li>
+		<li class="nav-item"><a href="/lesson04/quiz03/sell_layout.jsp" class="nav-link text-white list">물건 올리기</a></li>
+		<li class="nav-item"><a href="#" class="nav-link text-white list">마이 페이지</a></li>
 	</ul>
 </nav>

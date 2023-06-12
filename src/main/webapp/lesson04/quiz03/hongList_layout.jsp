@@ -11,25 +11,34 @@
 
 <style>
 	#wrap {width:1200px; margin:0 auto;}
-	header{height:180px}
-	.contents{height:800px}
+	header{height:180px;
+		   background-color: #FF8000}
 	footer{height:100px}
 	.menu{font-size:24px;
 		  font-weight:bold;}
+	.list:hover{color:red;}
 	.box{height:320px; 
 		 width:380px;
 		 border: 2px solid #FF8000}
+	.box:hover{background-color:#F6E3CE;}
+	.media-parent-box {gap:25px 10px; padding-top:20px;}
+	img{height:200px;
+		width: 300px}
+	.img{height:200px;
+		width: 300px}
+	.nickname{color:#FF8000}
+	
 </style>
 </head>
 <body>
 	<div id="wrap">
-		<header class="bg-warning">
+		<header>
 			<jsp:include page="header.jsp"/>
 		</header>
-		<div class="contents bg-success">
+		<div class="contents">
 			<jsp:include page="list_section.jsp"/>
 		</div>
-		<footer class="bg-info d-flex align-items-center justify-content-center">
+		<footer class="d-flex align-items-center justify-content-center">
 			<jsp:include page="footer.jsp"/>
 		</footer>
 	</div>

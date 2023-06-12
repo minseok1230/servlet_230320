@@ -11,36 +11,24 @@
 
 <style>
 	#wrap {width:1200px; margin:0 auto;}
-	header{height:180px}
-	.contents{height:800px}
+	header{height:180px;
+		   background-color: #FF8000}
 	.menu{font-size:24px;
 		  font-weight:bold;}
 	footer{height:100px}
+	.sell{width:900px;}
 </style>
 
 </head>
 <body>
 	<div id="wrap">
-		<header class="bg-warning">
+		<header>
 			<jsp:include page="header.jsp"/>
 		</header>
-		<div class="contents bg-success">
-			<div class="display-4">물건 올리기</div>
-			<div class="d-flex justify-content-between">
-				<div class="col-3">
-					<select name="id" class="form-control">
-  						<option disabled selected>-아이디 선택-</option>
-  						<option value="1">1</option>
- 						<option value="2">1ssss</option>
- 						<option value="3">2</option>
-  						<option value="4">3</option>
-					</select>
-				</div>
-				<input type="text" class="form-control col-4" placeholder="제목">
-				<input type="text" class="form-control col-3" placeholder="가격">
-			</div>
+		<div class="contents d-flex justify-content-center">
+			<jsp:include page="sell_section.jsp"/>
 		</div>
-		<footer class="bg-info d-flex align-items-center justify-content-center">
+		<footer class="d-flex align-items-center justify-content-center">
 			<jsp:include page="footer.jsp"/>
 		</footer>
 	</div>
